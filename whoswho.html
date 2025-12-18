@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Who's Who — Pawtucket Streetcar Strike</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="mast">
+      <div class="logo">PAWTUCKET CHRONICLE</div>
+      <div>
+        <h1>The Pawtucket Streetcar Strike — 1902</h1>
+        <div class="byline">Who's Who</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Interactive Map</a>
+      <a href="whoswho.html">Who's Who</a>
+      <a href="timeline.html">Timeline</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="whoswho">
+      <h2>Who's Who — Key Actors</h2>
+      <p class="muted">Click a person card to expand more details.</p>
+      <div class="people-grid">
+        <div class="person" onclick="togglePerson(this)">
+          <img src="https://via.placeholder.com/400x240?text=Person+Photo" alt="Portrait placeholder">
+          <h4>John Q. Example</h4>
+          <div class="muted">Role — e.g., Union leader / Company manager</div>
+          <p class="person-bio" style="display:none;">Short biography: replace with a 2–4 sentence summary of the actor's role in the strike.</p>
+        </div>
+
+        <div class="person" onclick="togglePerson(this)">
+          <img src="https://via.placeholder.com/400x240?text=Person+Photo" alt="Portrait placeholder">
+          <h4>Jane D. Sample</h4>
+          <div class="muted">Role — e.g., City official / Activist</div>
+          <p class="person-bio" style="display:none;">Short biography placeholder for Jane. Replace this text with real content.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>Created for classroom use.</div>
+      <div class="muted">Add your own historical figures and details.</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+function togglePerson(el){
+  const bio = el.querySelector('.person-bio');
+  bio.style.display = (bio.style.display==='none'||bio.style.display==='')?'block':'none';
+}
+</script>
+</body>
+</html>

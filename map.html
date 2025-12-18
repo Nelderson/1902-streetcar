@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Map — Pawtucket Streetcar Strike</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="mast">
+      <div class="logo">PAWTUCKET CHRONICLE</div>
+      <div>
+        <h1>The Pawtucket Streetcar Strike — 1902</h1>
+        <div class="byline">Interactive Map</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Interactive Map</a>
+      <a href="whoswho.html">Who's Who</a>
+      <a href="timeline.html">Timeline</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="map">
+      <h2>Interactive Map</h2>
+      <p class="muted">Click the highlighted areas to learn more about people and locations during the strike.</p>
+
+      <!-- Replace "pawtucket-map.jpg" with your actual map image file -->
+      <img src="pawtucket-map.jpg" alt="Historic map of Pawtucket" usemap="#strikeMap" width="100%">
+
+      <map name="strikeMap">
+        <!-- Example clickable regions -->
+        <area 
+          shape="circle" 
+          coords="320,220,40" 
+          href="whoswho.html#john-doe" 
+          alt="Union Headquarters" 
+          title="Union Headquarters">
+
+        <area 
+          shape="rect" 
+          coords="520,380,660,460" 
+          href="timeline.html#june-strike" 
+          alt="Downtown Streetcar Depot" 
+          title="Downtown Streetcar Depot">
+
+        <area 
+          shape="poly" 
+          coords="150,150,200,100,250,150,200,200" 
+          href="https://en.wikipedia.org/wiki/Pawtucket" 
+          alt="City Hall" 
+          title="Pawtucket City Hall">
+      </map>
+
+      <p class="muted">Tip: To add more clickable areas, you can use <a href="https://www.image-map.net/" target="_blank">Image-Map.net</a> to generate the coordinates.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>Created for classroom use.</div>
+      <div class="muted">Replace with your own map and hotspots.</div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

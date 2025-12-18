@@ -1,0 +1,209 @@
+/* =========================
+   Color + Layout Variables
+   ========================= */
+:root{
+  --sepia:#f4ece1;
+  --ink:#222;
+  --accent:#7a4a2a;
+  --muted:#6b6b6b;
+  --max-width:1100px;
+}
+
+/* =========================
+   Base Page Styles
+   ========================= */
+html, body{
+  margin:0;
+  padding:0;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background: linear-gradient(180deg, var(--sepia), #efe8d8);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* =========================
+   Main Container
+   ========================= */
+.container{
+  max-width: var(--max-width);
+  margin: 32px auto;
+  padding: 28px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   Header + Navigation
+   ========================= */
+header{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 3px double rgba(0,0,0,0.15);
+  padding-bottom: 12px;
+}
+
+.mast{
+  display: flex;
+  align-items: center;
+}
+
+h1{
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.4px;
+}
+
+.byline{
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+nav{
+  margin-top: 6px;
+}
+
+nav a{
+  margin-right: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+nav a:hover{
+  color: var(--accent);
+}
+
+/* =========================
+   Main Content
+   ========================= */
+main{
+  padding-top: 20px;
+}
+
+article{
+  font-size: 1rem;
+}
+
+/* Panels (used on homepage) */
+.panel{
+  background: rgba(245,241,233,0.9);
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================
+   Typography Helpers
+   ========================= */
+h2{
+  font-size: 1.4rem;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+}
+
+h3{
+  font-size: 1.1rem;
+  margin-top: 1.2em;
+}
+
+.muted{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Timeline Layout (NO FLOATS)
+   ========================= */
+/* Timeline */
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* Individual event */
+.event{
+  display:grid;
+  grid-template-columns: 90px 1fr;
+  column-gap:30px;
+  align-items:start;
+  border-left:3px solid rgba(0,0,0,0.06);
+  padding-left:14px;
+}
+
+/* Date column */
+.event .date{
+  font-weight:700;
+  color:var(--accent);
+  text-align:left;
+  white-space:nowrap;
+    margin-right:10px;
+}
+
+/* Text content */
+.event .content{
+  max-width:720px;
+}
+
+/* Subheading */
+.event .content strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+/* Images */
+.timeline-figure{
+  margin:8px 0 6px;
+}
+
+.timeline-figure img{
+  max-width:100%;
+  border-radius:4px;
+}
+
+.timeline-figure figcaption{
+  font-size:0.85em;
+  color:var(--muted);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer{
+  margin-top: 28px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   Buttons / Links
+   ========================= */
+a.button{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+@media (max-width: 800px){
+  .event{
+    gap: 12px;
+  }
+
+  .event .date{
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+}
